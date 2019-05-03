@@ -21,9 +21,9 @@ namespace ASP_NET_MVC_Q6.ActionFilter
         {
             var controllerName = routeData.Values["controller"];
             var actionName = routeData.Values["action"];
-            var message = String.Format("{0} controller : {1} action:{2}", methodName, controllerName, actionName);
+            var message = String.Format( methodName, controllerName, actionName);
             Debug.WriteLine(message, "Action Filter Log");
-            output.WriteLine(message.ToString());
+            output.WriteLine(message);
         }
     }
 }
