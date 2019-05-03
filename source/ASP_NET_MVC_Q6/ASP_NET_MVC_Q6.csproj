@@ -104,6 +104,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Order\Views\Default\Detail.cshtml" />
+    <Content Include="Areas\Order\Views\Default\List.cshtml" />
+    <Content Include="Areas\Order\Views\web.config" />
+    <Content Include="Areas\Product\Views\Main\List.cshtml" />
+    <Content Include="Areas\Product\Views\web.config" />
+    <Content Include="Areas\Ticket\Views\Main\Detail.cshtml" />
+    <Content Include="Areas\Ticket\Views\Main\List.cshtml" />
+    <Content Include="Areas\Ticket\Views\web.config" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -113,14 +121,6 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Areas\Order\Views\web.config" />
-    <Content Include="Areas\Order\Views\Default\List.cshtml" />
-    <Content Include="Areas\Order\Views\Default\Detail.cshtml" />
-    <Content Include="Areas\Ticket\Views\web.config" />
-    <Content Include="Areas\Ticket\Views\Main\List.cshtml" />
-    <Content Include="Areas\Ticket\Views\Main\Detail.cshtml" />
-    <Content Include="Areas\Product\Views\web.config" />
-    <Content Include="Areas\Product\Views\Main\List.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -158,6 +158,7 @@
     <Content Include="Views\Home\Welcome.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Main\List.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

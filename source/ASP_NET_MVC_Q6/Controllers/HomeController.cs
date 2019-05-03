@@ -5,12 +5,15 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace ASP_NET_MVC_Q6.Area.Controllers
+namespace ASP_NET_MVC_Q6.Controllers
 {
     [LogActionFilter]
     public class HomeController : Controller
     {
-        // GET: Main
+        public ActionResult Index()
+        {
+            return View();
+        }
         public ActionResult Welcome()
         {
             return View();
