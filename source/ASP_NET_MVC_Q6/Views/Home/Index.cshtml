@@ -2,45 +2,126 @@
 
 <html>
 <head>
+    <style>
+        .fancytable {
+            border: 1px solid #cccccc;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+            .fancytable td {
+                border: 1px solid #cccccc;
+                color: #555555;
+                text-align: center;
+                line-height: 28px;
+            }
+
+        .headerrow {
+            background-color: #0066cc;
+        }
+
+            .headerrow td {
+                color: #ffffff;
+                text-align: center;
+            }
+
+        .datarowodd {
+            background-color: #ffffff;
+        }
+
+        .dataroweven {
+            background-color: #efefef;
+        }
+
+        .datarowodd td {
+            background-color: #ffffff;
+        }
+
+        .dataroweven td {
+            background-color: #efefef;
+        }
+    </style>
     <meta name="viewport" content="width=device-width" />
     <title>連結目錄</title>
 </head>
 <body>
-    <div>
-        controller = Default , action = Login :
-        <a href="@Url.Action("Login","Default")">Login</a><br />
-    </div>
-    <div>
-        controller = Home, action = Welcome :
-        <a href="@Url.Action("Welcome","Home")">Welcome</a><br />
-    </div>
-    <div>
-        controller = Home, action = ContactMe :
-        <a href="@Url.Action("ContactMe","Home")">Contact</a><br />
-    </div>
-    <div>
-        controller = Default, action = List :
-        <a href="@Url.Action("List","Default")">List</a><br />
-    </div>
-    <div>
-        area = Order, controller = Default, action = List, {page} = 數字:
-        <a href="@Url.Action("List", "Default", new { Area = "Order",page=2})">Order/List</a><br />
-    </div>
-    <div>
-        area = Order, controller = Default, action = Detail, {id} = 數字:
-        <a href="@Url.Action("Detail", "Default", new { Area = "Order",id=2})">Order/Detail</a><br />
-    </div>
-    <div>
-        area = Ticket, controller = Main, action = List:
-        <a href="@Url.Action("List", "Main", new { Area = "Ticket"})">Order/Detail</a><br />
-    </div>
-    <div>
-        area = Ticket, controller = Main, action = Detail, {id} = 數字:
-        <a href="@Url.Action("Detail", "Main", new { Area = "Ticket",id=8})">Ticket/Detail</a><br />
-    </div>
-    <div>
-        area = Product, controller = Main, action = List, {category} = 字串
-        <a href="@Url.Action("List", "Main", new { Area = "Product",category="category"})">Product/{category}</a><br />
-    </div>
+    <table class="fancytable">
+        <tr class="headerrow">
+            <td>題目</td>
+            <td>連結</td>
+        </tr>
+        <tr class="datarowodd">
+            <td>
+                controller = Default , action = Login 
+            </td>
+            <td>
+                <a href="@Url.Action("Login","Default")">Login</a><br />
+            </td>
+        </tr>
+        <tr class="dataroweven">
+            <td>
+                controller = Home, action = Welcome 
+            </td>
+            <td>
+                 <a href="@Url.Action("Welcome","Home")">Welcome</a><br/>
+            </td>
+        </tr>
+        <tr class="datarowodd">
+            <td>
+                controller = Home, action = ContactMe 
+            </td>
+            <td>
+                <a href="@Url.Action("ContactMe","Home")">Contact</a><br />
+            </td>
+        </tr>
+        <tr class="dataroweven">
+            <td>
+                controller = Default, action = List 
+            </td>
+            <td>
+                <a href="@Url.Action("List","Default")">List</a><br />
+            </td>
+        </tr>
+        <tr class="datarowodd">
+            <td>
+                area = Order, controller = Default, action = List, {page} = 數字
+            </td>
+            <td>
+                <a href="@Url.Action("List", "Default", new { Area = "Order"})">Order/List</a><br />
+            </td>
+        </tr>
+        <tr class="dataroweven">
+            <td>
+                area = Order, controller = Default, action = Detail, {id} = 數字
+            </td>
+            <td>
+                <a href="@Url.Action("Detail", "Default", new { Area = "Order"})">Order/Detail</a><br />
+            </td>
+        </tr>
+        <tr class="datarowodd">
+            <td>
+                area = Ticket, controller = Main, action = List
+            </td>
+            <td>
+                <a href="@Url.Action("List", "Main", new { Area = "Ticket"})">Order/Detail</a><br />
+            </td>
+        </tr>
+        <tr class="dataroweven">
+            <td>
+                area = Ticket, controller = Main, action = Detail, {id} = 數字
+            </td>
+            <td>
+                <a href="@Url.Action("Detail", "Main", new { Area = "Ticket"})">Ticket/Detail</a><br />
+            </td>
+         </tr>
+        <tr class="datarowodd">
+             <td>
+                area = Product, controller = Main, action = List, {category} = 字串
+             </td>
+             <td>
+                <a href="@Url.Action("List", "Main", new { Area = "Product"})">Product/{category}</a><br/>
+             </td>
+        </tr>
+    </table>
 </body>
 </html>

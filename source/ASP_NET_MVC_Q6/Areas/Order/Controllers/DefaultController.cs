@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ASP_NET_MVC_Q6.Models;
 
 namespace ASP_NET_MVC_Q6.Areas.Order.Controllers
 {
@@ -11,15 +12,32 @@ namespace ASP_NET_MVC_Q6.Areas.Order.Controllers
     public class DefaultController : Controller
     {
         // GET: Order/Main
-        public ActionResult List(int page=1)
+        public ActionResult List()
         {
-      
-            return View(page);
-        }
-        public ActionResult Detail(int id = 8)
-        {
+            int Page = 1;
+            Route route = new Route();
+            string controller = RouteData.Values["controller"] as string;
+            string action = RouteData.Values["action"] as string;
+            string area= RouteData.Values["Area"] as string;
+            ViewBag.controller = controller;
+            ViewBag.action = action;
+            ViewBag.area = area;
+            route.page=Page;
 
-            return View(id);
+            return View(route);            
+        }
+        public ActionResult Detail()
+        {
+            int id = 1;
+            Route route = new Route();
+            string controller = RouteData.Values["controller"] as string;
+            string action = RouteData.Values["action"] as string;
+            string area = RouteData.Values["Area"] as string;
+            ViewBag.controller = controller;
+            ViewBag.action = action;
+            ViewBag.area = area;
+            route.id = id;
+            return View(route);
         }
     }
 }

@@ -10,9 +10,11 @@ namespace ASP_NET_MVC_Q6.ActionFilter
 {
     public class LogActionFilterAttribute : ActionFilterAttribute, IActionFilter
     {
+        private HttpWriter output;
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            WriteLog("OnActionExecuting", filterContext.RouteData);
+            output = (HttpWriter)filterContext.RequestContext.HttpContext.Response.Output;
+            WriteLog("OnActionExecuting", filterContext.RouteData);           
         }
 
         private void WriteLog(string methodName, RouteData routeData)
@@ -21,6 +23,7 @@ namespace ASP_NET_MVC_Q6.ActionFilter
             var actionName = routeData.Values["action"];
             var message = String.Format("{0} controller : {1} action:{2}", methodName, controllerName, actionName);
             Debug.WriteLine(message, "Action Filter Log");
+            output.WriteLine(message.ToString());
         }
     }
 }
