@@ -18,7 +18,7 @@ namespace ASP_NET_MVC_Q6.Controllers
         {
             return View();
         }
-        public ActionResult Contact()
+        public ActionResult ContactMe()
         {
             return View();
         }

@@ -8,7 +8,7 @@ using System.Web.Mvc;
 namespace ASP_NET_MVC_Q6.Controllers
 {
     [LogActionFilter]
-    public class MainController : Controller
+    public class DefaultController : Controller
     {
         // GET: Main
         public ActionResult Login()

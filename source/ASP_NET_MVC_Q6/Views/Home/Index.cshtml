@@ -7,10 +7,40 @@
 </head>
 <body>
     <div>
-        controller = Default
+        controller = Default , action = Login :
+        <a href="@Url.Action("Login","Default")">Login</a><br />
     </div>
     <div>
-        <a href="@Url.Action("index","login")"></a><br />
+        controller = Home, action = Welcome :
+        <a href="@Url.Action("Welcome","Home")">Welcome</a><br />
+    </div>
+    <div>
+        controller = Home, action = ContactMe :
+        <a href="@Url.Action("ContactMe","Home")">Contact</a><br />
+    </div>
+    <div>
+        controller = Default, action = List :
+        <a href="@Url.Action("List","Default")">List</a><br />
+    </div>
+    <div>
+        area = Order, controller = Default, action = List, {page} = 數字:
+        <a href="@Url.Action("List", "Default", new { Area = "Order",page=2})">Order/List</a><br />
+    </div>
+    <div>
+        area = Order, controller = Default, action = Detail, {id} = 數字:
+        <a href="@Url.Action("Detail", "Default", new { Area = "Order",id=2})">Order/Detail</a><br />
+    </div>
+    <div>
+        area = Ticket, controller = Main, action = List:
+        <a href="@Url.Action("List", "Main", new { Area = "Ticket"})">Order/Detail</a><br />
+    </div>
+    <div>
+        area = Ticket, controller = Main, action = Detail, {id} = 數字:
+        <a href="@Url.Action("Detail", "Main", new { Area = "Ticket",id=8})">Ticket/Detail</a><br />
+    </div>
+    <div>
+        area = Product, controller = Main, action = List, {category} = 字串
+        <a href="@Url.Action("List", "Main", new { Area = "Product",category="category"})">Product/{category}</a><br />
     </div>
 </body>
 </html>
