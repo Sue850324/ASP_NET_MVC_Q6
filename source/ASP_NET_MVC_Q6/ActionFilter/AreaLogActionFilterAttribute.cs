@@ -22,7 +22,7 @@ namespace ASP_NET_MVC_Q6.ActionFilter
             var Area= routeData.Values["Area"];
             var controllerName = routeData.Values["controller"];
             var actionName = routeData.Values["action"];
-            var message = String.Format("{0} area :{1} controller : {2} action:{3}", methodName, Area, controllerName, actionName);
+            var message = String.Format( methodName, Area, controllerName, actionName);
             output.WriteLine(message);
             Debug.WriteLine(message, "Action Filter Log");
             
