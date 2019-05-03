@@ -16,8 +16,8 @@ namespace ASP_NET_MVC_Q6.Areas.Order
         {
             context.MapRoute(
                 "Order_default",
-                "Order/{action}/{id}",
-                new { controller="Default",action = "Index", id = UrlParameter.Optional }
+                "{Area}/{action}/{id}",
+                new {Area="Order", controller="Default",action = "Index", id = UrlParameter.Optional }
             );
         }
     }

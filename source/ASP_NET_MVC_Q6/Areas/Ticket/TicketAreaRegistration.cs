@@ -16,8 +16,8 @@ namespace ASP_NET_MVC_Q6.Areas.Ticket
         {
             context.MapRoute(
                 "Ticket_default",
-                "Ticket/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                "{Area}/{controller}/{action}/{id}",
+                new {Area="Ticket", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

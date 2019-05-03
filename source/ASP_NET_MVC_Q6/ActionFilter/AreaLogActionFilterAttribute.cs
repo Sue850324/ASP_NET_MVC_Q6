@@ -8,7 +8,7 @@ using System.Web.Routing;
 
 namespace ASP_NET_MVC_Q6.ActionFilter
 {
-    public class LogActionFilterAttribute : ActionFilterAttribute, IActionFilter
+    public class AreaLogActionFilterAttribute : ActionFilterAttribute, IActionFilter
     {
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
@@ -17,9 +17,10 @@ namespace ASP_NET_MVC_Q6.ActionFilter
 
         private void WriteLog(string methodName, RouteData routeData)
         {
+            var Area= routeData.Values["Area"];
             var controllerName = routeData.Values["controller"];
             var actionName = routeData.Values["action"];
-            var message = String.Format("{0} controller : {1} action:{2}", methodName, controllerName, actionName);
+            var message = String.Format("{0} area :{1} controller : {2} action:{3}", methodName, Area, controllerName, actionName);
             Debug.WriteLine(message, "Action Filter Log");
         }
     }

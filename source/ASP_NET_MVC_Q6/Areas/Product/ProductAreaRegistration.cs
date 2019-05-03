@@ -16,8 +16,8 @@ namespace ASP_NET_MVC_Q6.Areas.Product
         {
             context.MapRoute(
                 "Product_default",
-                "Product/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                "{Area}/{controller}/{action}/{id}",
+                new {Area="Product", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
