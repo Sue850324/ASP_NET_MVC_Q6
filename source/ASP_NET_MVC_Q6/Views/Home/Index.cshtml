@@ -68,7 +68,7 @@
         </tr>
         <tr class="datarowodd">
             <td>
-                controller = Home, action = ContactMe 
+                Controller = Home, Action = ContactMe 
             </td>
             <td>
                 <a href="@Url.Action("ContactMe","Home")">Contact</a><br />
@@ -76,7 +76,7 @@
         </tr>
         <tr class="dataroweven">
             <td>
-                controller = Default, action = List 
+                Controller = Default, Action = List 
             </td>
             <td>
                 <a href="@Url.Action("List","Default")">List</a><br />
@@ -84,7 +84,7 @@
         </tr>
         <tr class="datarowodd">
             <td>
-                area = Order, controller = Default, action = List, {page} = 數字
+                Area = Order, Controller = Default, Action = List, {Page} = 數字
             </td>
             <td>
                 <a href="@Url.Action("List", "Default", new { Area = "Order"})">Order/List</a><br />
@@ -92,7 +92,7 @@
         </tr>
         <tr class="dataroweven">
             <td>
-                area = Order, controller = Default, action = Detail, {id} = 數字
+                Area = Order, Controller = Default, Action = Detail, {id} = 數字
             </td>
             <td>
                 <a href="@Url.Action("Detail", "Default", new { Area = "Order"})">Order/Detail</a><br />
@@ -100,7 +100,7 @@
         </tr>
         <tr class="datarowodd">
             <td>
-                area = Ticket, controller = Main, action = List
+                Area = Ticket, Controller = Main, Action = List
             </td>
             <td>
                 <a href="@Url.Action("List", "Main", new { Area = "Ticket"})">Order/Detail</a><br />
@@ -108,7 +108,7 @@
         </tr>
         <tr class="dataroweven">
             <td>
-                area = Ticket, controller = Main, action = Detail, {id} = 數字
+                Area = Ticket, Controller = Main, Action = Detail, {id} = 數字
             </td>
             <td>
                 <a href="@Url.Action("Detail", "Main", new { Area = "Ticket"})">Ticket/Detail</a><br />
@@ -116,7 +116,7 @@
          </tr>
         <tr class="datarowodd">
              <td>
-                area = Product, controller = Main, action = List, {category} = 字串
+                Area = Product, Controller = Main, Action = List, {category} = 字串
              </td>
              <td>
                 <a href="@Url.Action("List", "Main", new { Area = "Product"})">Product/{category}</a><br/>

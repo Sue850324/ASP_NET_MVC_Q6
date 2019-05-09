@@ -7,9 +7,9 @@ namespace ASP_NET_MVC_Q6.Models
 {
     public class Route
     {
-        public int page { set; get; }
-        public int id { set; get; }
+        public int Page { set; get; }
+        public int ID { set; get; }
 
-        public string category { set; get; }
+        public string Category { set; get; }
     }
 }

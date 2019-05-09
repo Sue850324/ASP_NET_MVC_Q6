@@ -12,20 +12,20 @@ namespace ASP_NET_MVC_Q6.Controllers
     {    
         public ActionResult Login()
         {
-            string controller = RouteData.Values["controller"] as string;
-            string action = RouteData.Values["action"] as string;
+            string controller = RouteData.Values["Controller"] as string;
+            string action = RouteData.Values["Action"] as string;
             string area = RouteData.Values["Area"] as string;
-            ViewBag.controller = controller;
-            ViewBag.action = action;
+            ViewBag.Controller = controller;
+            ViewBag.Action = action;
             return View();
         }
         public ActionResult List()
         {
-            string controller = RouteData.Values["controller"] as string;
-            string action = RouteData.Values["action"] as string;
+            string controller = RouteData.Values["Controller"] as string;
+            string action = RouteData.Values["Action"] as string;
             string area = RouteData.Values["Area"] as string;
-            ViewBag.controller = controller;
-            ViewBag.action = action;
+            ViewBag.Controller = controller;
+            ViewBag.Action = action;
             return View();
         }
     }

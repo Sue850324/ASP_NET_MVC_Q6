@@ -15,8 +15,8 @@ namespace ASP_NET_MVC_Q6.Areas.Ticket.Controllers
         public ActionResult List()
         {
             Route route = new Route();
-            string controller = RouteData.Values["controller"] as string;
-            string action = RouteData.Values["action"] as string;
+            string controller = RouteData.Values["Controller"] as string;
+            string action = RouteData.Values["Action"] as string;
             string area = RouteData.Values["Area"] as string;
             ViewBag.controller = controller;
             ViewBag.action = action;
@@ -27,13 +27,13 @@ namespace ASP_NET_MVC_Q6.Areas.Ticket.Controllers
         {
             int id = 9;
             Route route = new Route();
-            string controller = RouteData.Values["controller"] as string;
-            string action = RouteData.Values["action"] as string;
+            string controller = RouteData.Values["Controller"] as string;
+            string action = RouteData.Values["Action"] as string;
             string area = RouteData.Values["Area"] as string;
             ViewBag.controller = controller;
             ViewBag.action = action;
             ViewBag.area = area;
-            route.id = id;
+            route.ID = id;
 
             return View(route);
         }
