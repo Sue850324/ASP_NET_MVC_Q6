@@ -12,28 +12,24 @@ namespace ASP_NET_MVC_Q6.Areas.Order.Controllers
     public class DefaultController : Controller
     {
         Random rdm = new Random();
-        RouteModel route = new RouteModel();
-        public void  ShowRoute()
+       
+        public object  ShowRoute(RouteModel routeModel)
         {
-            string controller = RouteData.Values["Controller"] as string;
-            string action = RouteData.Values["Action"] as string;
-            string area= RouteData.Values["Area"] as string;
-            ViewBag.Controller = controller;
-            ViewBag.Action = action;
-            ViewBag.Area = area;
+            RouteModel route =new RouteModel();         
+            route.Area = routeModel.Area;
+            route.Controller = routeModel.Controller;
+            route.Action = routeModel.Action;
+            route.Value = rdm.Next(1, 100);
+            return route;
         }
         // GET: Order/Main
-        public ActionResult List()
-        {         
-            ShowRoute();
-            route.Page = rdm.Next(1, 100);
-            return View(route);            
+        public ActionResult List(RouteModel routeModel)
+        {                      
+            return View(ShowRoute(routeModel));            
         }
-        public ActionResult Detail()
-        {           
-            ShowRoute();
-            route.ID = rdm.Next(1,100);
-            return View(route);
+        public ActionResult Detail(RouteModel routeModel)
+        {
+            return View(ShowRoute(routeModel));
         }
     }
 }

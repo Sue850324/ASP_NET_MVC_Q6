@@ -10,19 +10,14 @@ namespace ASP_NET_MVC_Q6.Areas.Product.Controllers
     [AreaLogActionFilter]
     public class MainController : Controller
     {
-       
-        public ActionResult List()
+        Random rdm = new Random();
+        public ActionResult List(RouteModel routeModel)
         {
-            string category = "List";
             RouteModel route = new RouteModel();
-            string controller = RouteData.Values["Controller"] as string;
-            string action = RouteData.Values["Action"] as string;
-            string area = RouteData.Values["Area"] as string;
-            ViewBag.Controller = controller;
-            ViewBag.Action = action;
-            ViewBag.Area = area;
-            route.Category= category;
-
+            route.Area = routeModel.Area;
+            route.Controller = routeModel.Controller;
+            route.Action = routeModel.Action;
+            route.Category = "test";
             return View(route);
         }
     }

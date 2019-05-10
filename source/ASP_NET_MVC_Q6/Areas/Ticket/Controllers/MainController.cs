@@ -11,29 +11,25 @@ namespace ASP_NET_MVC_Q6.Areas.Ticket.Controllers
     [AreaLogActionFilter]
     public class MainController : Controller
     {
-        RouteModel route = new RouteModel();
-        Random rdn = new Random();            
-        public void ShowRoute()
-        {
-            string controller = RouteData.Values["Controller"] as string;
-            string action = RouteData.Values["Action"] as string;
-            string area = RouteData.Values["Area"] as string;
-            ViewBag.controller = controller;
-            ViewBag.action = action;
-            ViewBag.area = area;
+        Random rdm = new Random();
+        public object ShowRoute(RouteModel routeModel)
+        {      
+            RouteModel route = new RouteModel();
+            route.Area = routeModel.Area;
+            route.Controller = routeModel.Controller;
+            route.Action = routeModel.Action;
+            route.Value = rdm.Next(1, 100);
+            return route;
         }
         // GET: Ticket/Main
-        public ActionResult List()
-        {
-            ShowRoute();
-            return View();
+        public ActionResult List(RouteModel routeModel)
+        {           
+            return View( ShowRoute(routeModel));
         }
-        public ActionResult Detail()
+        public ActionResult Detail(RouteModel routeModel)
         {
-            ShowRoute();
-            route.ID = rdn.Next(1, 100);
+            return View(ShowRoute(routeModel));
 
-            return View(route);
         }
     }
 }

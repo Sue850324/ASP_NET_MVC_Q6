@@ -4,39 +4,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ASP_NET_MVC_Q6.Models;
 
 namespace ASP_NET_MVC_Q6.Controllers
 {
     [AreaLogActionFilter]
     public class HomeController : Controller
     {
-        public void ShowRoute()
+        public object ShowRoute(RouteModel routeModel)
         {
-            string controller = RouteData.Values["Controller"] as string;
-            string action = RouteData.Values["Action"] as string;
-            string area = RouteData.Values["Area"] as string;
-            if (area is null)
+            RouteModel route = new RouteModel();
+            route.Controller = routeModel.Controller;
+            if (routeModel.Area == null)
             {
-                area = "-";
+                route.Area = "-";
             }
-            ViewBag.Area = area;
-            ViewBag.Controller = controller;
-            ViewBag.Action = action;
+            else
+            {
+                route.Area = routeModel.Area;
+            }
+            route.Action = routeModel.Action;
+            return route;
         }
         public ActionResult Index()
         {
-            ShowRoute();
             return View();
         }
-        public ActionResult Welcome()
+        public ActionResult Welcome(RouteModel routeModel)
         {
-            ShowRoute();
-            return View();
+            return View(ShowRoute(routeModel));
         }
-        public ActionResult ContactMe()
+        public ActionResult ContactMe(RouteModel routeModel)
         {
-            ShowRoute();
-            return View();
+            return View(ShowRoute(routeModel));
         }
     }
 }

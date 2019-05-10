@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html>
-
+﻿@model ASP_NET_MVC_Q6.Models.RouteModel
+<!DOCTYPE html>
 <html>
 <head>
     <style>
@@ -42,15 +42,15 @@
             <td>Controller</td>
             <td>Action</td>
         </tr>
-        <tr class="datarowodd">     
+        <tr class="datarowodd">
             <td>
-                @ViewBag.Area
+                @Model.Area
             </td>
             <td>
-                @ViewBag.Controller
+                @Model.Controller
             </td>
             <td>
-                @ViewBag.Action
+                @Model.Action
             </td>
     </table>
 </body>

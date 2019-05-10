@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-
 <html>
 <head>
     <style>
@@ -52,7 +51,7 @@
         </tr>
         <tr class="datarowodd">
             <td>
-                Controller = Default , Action = Login 
+                Controller = Default , Action = Login
             </td>
             <td>
                 <a href="@Url.Action("Login","Default")">Login</a><br />
@@ -60,15 +59,15 @@
         </tr>
         <tr class="dataroweven">
             <td>
-                Controller = Home, Action = Welcome 
+                Controller = Home, Action = Welcome
             </td>
             <td>
-                 <a href="@Url.Action("Welcome","Home")">Welcome</a><br/>
+                <a href="@Url.Action("Welcome","Home")">Welcome</a><br />
             </td>
         </tr>
         <tr class="datarowodd">
             <td>
-                Controller = Home, Action = ContactMe 
+                Controller = Home, Action = ContactMe
             </td>
             <td>
                 <a href="@Url.Action("ContactMe","Home")">Contact</a><br />
@@ -76,7 +75,7 @@
         </tr>
         <tr class="dataroweven">
             <td>
-                Controller = Default, Action = List 
+                Controller = Default, Action = List
             </td>
             <td>
                 <a href="@Url.Action("List","Default")">List</a><br />
@@ -113,14 +112,14 @@
             <td>
                 <a href="@Url.Action("Detail", "Main", new { Area = "Ticket"})">Ticket/Detail</a><br />
             </td>
-         </tr>
+        </tr>
         <tr class="datarowodd">
-             <td>
+            <td>
                 Area = Product, Controller = Main, Action = List, {category} = 字串
-             </td>
-             <td>
-                <a href="@Url.Action("List", "Main", new { Area = "Product"})">Product/{category}</a><br/>
-             </td>
+            </td>
+            <td>
+                <a href="@Url.Action("List", "Main", new { Area = "Product"})">Product/{category}</a><br />
+            </td>
         </tr>
     </table>
 </body>
