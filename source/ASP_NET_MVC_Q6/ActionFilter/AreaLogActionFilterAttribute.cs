@@ -30,10 +30,6 @@ namespace ASP_NET_MVC_Q6.ActionFilter
             route.Controller = controllerName.ToString();
             var actionName = routeData.Values["Action"];
             route.Action = actionName.ToString();
-            var message = String.Format(methodName, route.Area, route.Controller, route.Action);
-            output.WriteLine(message);
-            Debug.WriteLine(message, "Action Filter Log");
-
         }
     }
 }
