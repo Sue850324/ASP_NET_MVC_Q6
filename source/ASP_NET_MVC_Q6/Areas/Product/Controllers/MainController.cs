@@ -14,7 +14,7 @@ namespace ASP_NET_MVC_Q6.Areas.Product.Controllers
         public ActionResult List()
         {
             string category = "List";
-            Route route = new Route();
+            RouteModel route = new RouteModel();
             string controller = RouteData.Values["Controller"] as string;
             string action = RouteData.Values["Action"] as string;
             string area = RouteData.Values["Area"] as string;

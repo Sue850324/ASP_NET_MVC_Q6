@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using ASP_NET_MVC_Q6.Models;
 
 namespace ASP_NET_MVC_Q6.ActionFilter
 {
@@ -14,7 +15,7 @@ namespace ASP_NET_MVC_Q6.ActionFilter
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             output = (HttpWriter)filterContext.RequestContext.HttpContext.Response.Output;
-            WriteLog("OnActionExecuting", filterContext.RouteData);      
+            WriteLog(" ", filterContext.RouteData);      
         }
 
         private void WriteLog(string methodName, RouteData routeData)

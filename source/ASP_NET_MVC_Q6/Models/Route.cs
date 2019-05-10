@@ -5,11 +5,13 @@ using System.Web;
 
 namespace ASP_NET_MVC_Q6.Models
 {
-    public class Route
+    public class RouteModel
     {
         public int Page { set; get; }
         public int ID { set; get; }
-
+        public string Area { set; get; }
+        public string Action { set; get; }
+        public string Controller { set; get; }
         public string Category { set; get; }
     }
 }
