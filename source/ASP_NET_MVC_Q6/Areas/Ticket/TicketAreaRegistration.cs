@@ -11,7 +11,6 @@ namespace ASP_NET_MVC_Q6.Areas.Ticket
                 return "Ticket";
             }
         }
-
         public override void RegisterArea(AreaRegistrationContext context) 
         {
             context.MapRoute(

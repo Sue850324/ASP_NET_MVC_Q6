@@ -11,7 +11,7 @@ namespace ASP_NET_MVC_Q6.Controllers
     [AreaLogActionFilter]
     public class HomeController : Controller
     {
-        public object ShowRoute(RouteModel routeModel)
+        public RouteModel ShowRoute(RouteModel routeModel)
         {
             RouteModel route = new RouteModel();
             route.Controller = routeModel.Controller;

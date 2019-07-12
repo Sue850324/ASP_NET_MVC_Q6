@@ -12,7 +12,7 @@ namespace ASP_NET_MVC_Q6.Areas.Ticket.Controllers
     public class MainController : Controller
     {
         Random rdm = new Random();
-        public object ShowRoute(RouteModel routeModel)
+        public RouteModel ShowRoute(RouteModel routeModel)
         {      
             RouteModel route = new RouteModel();
             route.Area = routeModel.Area;
